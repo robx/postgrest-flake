@@ -1,7 +1,7 @@
 {
   description = "REST API for any Postgres database";
 
-  inputs.nixpkgs.url = "nixpkgs/nixos-21.11";
+  inputs.nixpkgs.url = "nixpkgs/nixos-22.05";
   inputs.postgrest = {
     url = "github:PostgREST/postgrest";
     flake = false;
@@ -16,7 +16,7 @@
     forAllSystems = nixpkgs.lib.genAttrs supportedSystems;
   in {
     defaultPackage = forAllSystems (system: let
-      compiler = "ghc8107";
+      compiler = "ghc923";
       overlay = import (postgrest + "/nix/overlays/haskell-packages.nix") {inherit compiler;};
       pkgs = import nixpkgs {
         inherit system;
