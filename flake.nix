@@ -1,7 +1,7 @@
 {
   description = "REST API for any Postgres database";
 
-  inputs.nixpkgs.url = "nixpkgs/nixos-22.05";
+  inputs.nixpkgs.url = "nixpkgs/nixos-unstable";
   inputs.postgrest = {
     url = "github:PostgREST/postgrest";
     flake = false;
