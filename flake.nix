@@ -1,5 +1,5 @@
 {
-  description = "REST API for any Postgres database";
+  description = "REST API for any PostgreSQL database";
 
   inputs.nixpkgs.url = "nixpkgs/nixos-unstable";
   inputs.postgrest = {
